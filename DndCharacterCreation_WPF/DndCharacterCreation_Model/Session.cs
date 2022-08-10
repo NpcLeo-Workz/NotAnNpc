@@ -4,10 +4,11 @@ namespace DndCharacterCreation_Model
 {
     public static class Session
     {
-        // houdt het logintype bij(user, employee en admin)
+        // Keeps the current login type (admin or user)
         public static string logintype;
-        // houdt de current view bij
+        // keeps the sessions current window
         public static Window window;   
+        //closes the current window
         public static void ClosePreviousWindow(Window view)
         {
             if(window != null)

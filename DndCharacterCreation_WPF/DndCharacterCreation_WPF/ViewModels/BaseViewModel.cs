@@ -10,6 +10,7 @@ using DndCharacterCreation_Model;
 
 namespace DndCharacterCreation_WPF.ViewModels
 {
+    //This is the base view model
     public abstract class BaseViewModel : IDataErrorInfo, INotifyPropertyChanged, ICommand
     {
         #region ICommand

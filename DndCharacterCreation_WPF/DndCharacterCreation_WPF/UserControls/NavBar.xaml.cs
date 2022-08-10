@@ -30,6 +30,7 @@ namespace DndCharacterCreation_WPF.UserControls
         DynamicNavBarViewModel vm = new DynamicNavBarViewModel();
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            //Adds the dynamically created buttons to the user control
             this.DataContext = vm;
             vm.AddButtonsToNavbar();
             foreach (var item in vm.Navbarbuttons)
@@ -40,6 +41,7 @@ namespace DndCharacterCreation_WPF.UserControls
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
+            //logs the person out and opens the login/main window
             Session.logintype = "";
             MainView view = new MainView();
             MainViewModel vm = new MainViewModel();
@@ -50,6 +52,7 @@ namespace DndCharacterCreation_WPF.UserControls
 
         private void btnRace_Click(object sender, RoutedEventArgs e)
         {
+            //Opens the Race Window
             RaceView view = new RaceView();
             RaceViewModel vm = new RaceViewModel();
             view.DataContext = vm;

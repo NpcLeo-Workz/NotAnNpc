@@ -30,20 +30,24 @@ namespace DndCharacterCreation_WPF.Views
         }
         private void btnRace_Click(object sender, RoutedEventArgs e)
         {
+            // Opens Race view as user
             Session.logintype = "User";
             RaceView view = new RaceView();
             RaceViewModel vm = new RaceViewModel();
             view.DataContext = vm;
+            // closes previous window
             Session.ClosePreviousWindow(view);
             view.Show();
         }
 
         private void btnRaceAdmin_Click(object sender, RoutedEventArgs e)
         {
+            // Opens Race view as Admin
             Session.logintype = "Admin";
             RaceView view = new RaceView();
             RaceViewModel vm = new RaceViewModel();
             view.DataContext = vm;
+            // Closes previous window
             Session.ClosePreviousWindow(view);
             view.Show();
         }

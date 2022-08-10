@@ -13,8 +13,10 @@ namespace DndCharacterCreation_WPF.ViewModels
 {
     public class CRUDRaceViewModel : BaseViewModel
     {
+        // the CRUDRaceViewModel is responsible for adding the needed buttons to the Crudbuttons list
         public List<Button> Crudbuttons = new List<Button>();
         public RelayCommand _executeButtonCommand;
+        //the relaycommand executebuttoncommand is used to add the executecommand to the dynamically created buttons with the right parameter
         public ICommand ExecuteButtonCommand
         {
             get
@@ -37,14 +39,13 @@ namespace DndCharacterCreation_WPF.ViewModels
         {
             switch (parameter.ToString())
             {
-                // case "Languages": ShowLanguages(); break;
                 case "Edit": ShowEditRaceView(); break;
                 case "Delete": DeleteRace(); break;
-
             }
         }
         public void AddButtonsToCrudbar()
         {
+            // creates the correct buttons according to the session.logintype
             switch (Session.logintype)
             {
                 case "Admin":

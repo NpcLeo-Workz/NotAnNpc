@@ -13,9 +13,10 @@ namespace DndCharacterCreation_WPF.ViewModels
 {
     public class DynamicNavBarViewModel : BaseViewModel
     {
+        // the DynamicNavBarViewModel is responsible for adding the needed buttons to the NavBarbuttons list
         public List<Button> Navbarbuttons = new List<Button>();
-        #region Relay command
         public RelayCommand _executeButtonCommand;
+        //the relaycommand executebuttoncommand is used to add the executecommand to the dynamically created buttons with the right parameter
         public ICommand ExecuteButtonCommand
         {
             get
@@ -25,7 +26,6 @@ namespace DndCharacterCreation_WPF.ViewModels
                 return _executeButtonCommand;
             }
         }
-        #endregion
         public override bool CanExecute(object parameter)
         {
             switch (parameter.ToString())
@@ -43,6 +43,7 @@ namespace DndCharacterCreation_WPF.ViewModels
         }
         public void AddButtonsToNavbar()
         {
+            // creates the correct buttons according to the session.logintype
             switch (Session.logintype)
             {
                 case "Admin":

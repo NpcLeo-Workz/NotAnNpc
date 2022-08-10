@@ -8,40 +8,46 @@
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
         Title="NotAnNpc" Height="850" Width="1600">
-    <Grid x:Name="WindowView">
-        <Grid >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="9*"/>
-                
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.Background>
-                <ImageBrush ImageSource="D:\dndproject\DndCharacterCreation_WPF\background.png" Stretch="UniformToFill"/>
-            </Grid.Background>
-            <Border Grid.Row="1" Grid.Column="1" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
-                <Border.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.65"/>
-                </Border.Background>
+    <!--Window showing all Races and Crud operations according to the Session.logintype-->
+    
+    <!--Primary Grid-->
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
 
-            </Border>
-            <Border Grid.Row="1" Grid.Column="2" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
-                <Border.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.65"/>
-                </Border.Background>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="1*"/>
-                    </Grid.RowDefinitions>
-                    <uc:CRUDRace Grid.Row="1" Margin="10"/>
-                </Grid>
-            </Border>
-            <uc:NavBar Grid.Row="0" Grid.ColumnSpan="3"/>
-        </Grid>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\dndproject\DndCharacterCreation_WPF\background.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        
+        <!--Begin Content-->
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.65"/>
+            </Border.Background>
+
+        </Border>
+        <Border Grid.Row="1" Grid.Column="2" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.65"/>
+            </Border.Background>
+            <!--Info Grid-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                
+                <!--Crud operation usercontrol-->
+                <uc:CRUDRace Grid.Row="1" Margin="10"/>
+            </Grid>
+        </Border>
+        <uc:NavBar Grid.Row="0" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
