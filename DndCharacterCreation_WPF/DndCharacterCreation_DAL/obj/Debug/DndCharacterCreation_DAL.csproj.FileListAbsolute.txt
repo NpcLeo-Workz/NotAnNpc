@@ -1,0 +1,12 @@
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\DndCharacterCreation_DAL.dll.config
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\DndCharacterCreation_DAL.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\DndCharacterCreation_DAL.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\EntityFramework.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\EntityFramework.xml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.AssemblyReference.cache
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.CoreCompileInputs.cache
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.CopyComplete
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.pdb

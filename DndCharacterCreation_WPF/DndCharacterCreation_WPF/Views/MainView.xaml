@@ -1,0 +1,65 @@
+﻿<Window x:Class="DndCharacterCreation_WPF.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DndCharacterCreation_WPF.Views"     
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="NotAnNpc" Height="450" Width="800">
+    <Grid x:Name="WindowView">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="D:\dndproject\DndCharacterCreation_WPF\background.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Border Grid.Row="1" BorderBrush="#FFD0A85C" BorderThickness="2">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.65"/>
+                    </Grid.Background>
+                    <Label Grid.ColumnSpan="2" Foreground="#FFD0A85C" FontSize="20">Will become login</Label>
+                    <Button Grid.Row="1" Grid.ColumnSpan="2" x:Name="btnRaceAdmin" Content="Create Character Admin" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Width="150" Click="btnRaceAdmin_Click" >
+                        <Button.Background>
+                            <SolidColorBrush Color="Black" Opacity="0.65"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="1" Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Margin="20,0,0,0" >
+                    <TextBlock  Foreground="#FFD0A85C" FontFamily="Zorque" FontSize="62" Text="Build Your Story"/>
+                    <TextBlock  Foreground="#FFD0A85C" FontFamily="Zorque" FontSize="62" Text="Today!"/>
+                </StackPanel>
+                <Button Grid.Row="1" x:Name="btnRace" Content="Create Character" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Width="200" Click="btnRace_Click" >
+                    <Button.Background>
+                        <SolidColorBrush Color="Black" Opacity="0.65"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
