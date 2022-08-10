@@ -8,7 +8,9 @@
         ResizeMode="CanMinimize"
         Title="NotAnNpc" Height="850" Width="430">
     <Grid>
-
+        <!--the create race view is used to add new races to the database -->
+        
+        <!-- Primary Grid-->
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="5*"/>
@@ -33,6 +35,8 @@
                 <SolidColorBrush Color="Black" Opacity="0.65"/>
             </Rectangle.Fill>
         </Rectangle>
+        
+        <!--Begin Content-->
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="AbilityScores:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Size:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
@@ -42,9 +46,9 @@
         <TextBlock Grid.Row="6" Grid.Column="0" Text="ClimbSpeed:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <TextBlock Grid.Row="7" Grid.Column="0" Text="CreatureType:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
         <TextBlock Grid.Row="8" Grid.Column="0" Text="Languages:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
-
         <TextBox x:Name="Name" Text="{Binding Race.Name}" Grid.Row="0" Grid.Column="1" Margin="10" BorderBrush="#FFD0A85C" Background="{x:Null}"/>
-
+        
+        <!--AbilityScore Grid -->
         <Grid x:Name="AbilityScoresgrid" Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -58,6 +62,8 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
+            
+            <!--Begin Content-->
             <TextBlock Grid.Row="0" Grid.Column="0" Text="Str:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
             <TextBlock Grid.Row="1" Grid.Column="0" Text="Dex:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Con:" Foreground="#FFD0A85C" FontSize="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
@@ -72,6 +78,7 @@
             <TextBox x:Name="Cha" Text="{Binding AbilityScoreBonus.Charisma}" Grid.Row="5" Grid.Column="1" Margin="5,5,10,5" BorderBrush="#FFD0A85C" Background="{x:Null}"/>
         </Grid>
 
+        <!--Size, Speeds and CreatureSize -->        
         <TextBox x:Name="Size" Text="{Binding Race.Size}" Grid.Row="2" Grid.Column="1" Margin="10" Foreground="#FFD0A85C" BorderBrush="#FFD0A85C" Background="{x:Null}"/>
         <TextBox x:Name="WalkSpeed" Text="{Binding Race.WalkSpeed}" Grid.Row="3" Grid.Column="1" Margin="10" Foreground="#FFD0A85C" BorderBrush="#FFD0A85C" Background="{x:Null}"/>
         <TextBox x:Name="SwimSpeed" Text="{Binding Race.SwimSpeed}" Grid.Row="4" Grid.Column="1" Margin="10" Foreground="#FFD0A85C" BorderBrush="#FFD0A85C" Background="{x:Null}"/>
@@ -79,6 +86,7 @@
         <TextBox x:Name="ClimbSpeed" Text="{Binding Race.ClimbSpeed}" Grid.Row="6" Grid.Column="1" Margin="10" Foreground="#FFD0A85C" BorderBrush="#FFD0A85C" Background="{x:Null}"/>
         <TextBox x:Name="CreatureType" Text="{Binding Race.CreatureType}" Grid.Row="7" Grid.Column="1" Margin="10" Foreground="#FFD0A85C" BorderBrush="#FFD0A85C" Background="{x:Null}"/>
 
+        <!--Languages Grid Comboboxes -->
         <Grid x:Name="Languagesgrid" Grid.Row="8" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -90,6 +98,7 @@
             <ComboBox x:Name="cbxLanguages3" Grid.Row="2" ItemsSource="{Binding Languages}" Margin="5,5,10,5" Foreground="#FFD0A85C" BorderBrush="#FFD0A85C" Background="{x:Null}"/>
         </Grid>
 
+        <!--Create and Cancel Buttons -->
         <Button Grid.Row="10" Grid.Column="0" x:Name="btnCreate" Content="Create Race" FontSize="30" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Margin="10" Click="btnCreate_Click">
             <Button.Background>
                 <SolidColorBrush Color="Black" Opacity="0.65"/>

@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:DndCharacterCreation_WPF.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="600" Loaded="UserControl_Loaded">
+    <!-- CRUDRace is a usercontrol for the crud operations used for the races -->
     <Grid>
         <Border Grid.Row="1" Grid.Column="1" BorderBrush="#FFD0A85C" BorderThickness="0,0,0,1">
             <Border.Background>
@@ -17,6 +18,9 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
+                <!--Only the Create button is hardcoded as the other buttons depend on the sessions logintype
+                    Some of the Races can only be accessed by the Admin-->
+                
                 <Button Grid.Column="0"  x:Name="btnCreate" Content="Create" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="1" Background="{x:Null}" FontSize="30" Click="btnCreate_Click" >
                 </Button>
                 

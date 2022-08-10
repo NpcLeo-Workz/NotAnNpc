@@ -7,6 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="1600" Loaded="UserControl_Loaded">
     <Grid>
+        
+        <!--the Navbar usercontrol is used as the navigation bar on all of the views.
+            Some of the buttons are created dynamically based on the sessions logintype-->
+        
         <Border Grid.Row="1" Grid.Column="1" BorderBrush="#FFD0A85C" BorderThickness="0,0,0,1">
             <Border.Background>
                 <SolidColorBrush Color="Black" Opacity="0.65"/>

@@ -8,34 +8,37 @@
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
         Title="NotAnNpc" Height="850" Width="1600">
-    <Grid x:Name="WindowView">
-        <Grid >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="9*"/>
-                
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.Background>
-                <ImageBrush ImageSource="D:\dndproject\DndCharacterCreation_WPF\background.png" Stretch="UniformToFill"/>
-            </Grid.Background>
-            <Border Grid.Row="1" Grid.Column="1" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
-                <Border.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.65"/>
-                </Border.Background>
+    <!--This view is Used to show all languages and offer the ability for Crud Operations -->
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
 
-            </Border>
-            <Border Grid.Row="1" Grid.Column="2" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
-                <Border.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.65"/>
-                </Border.Background>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="D:\dndproject\DndCharacterCreation_WPF\background.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        
+        <!--Begin Content-->
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.65"/>
+            </Border.Background>
 
-            </Border>
-            <uc:NavBar Grid.Row="0" Grid.ColumnSpan="3"/>
-        </Grid>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="2" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.65"/>
+            </Border.Background>
+
+        </Border>
+        
+        <!--Navigationbar usercontrol-->
+        <uc:NavBar Grid.Row="0" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>

@@ -29,6 +29,7 @@ namespace DndCharacterCreation_WPF.UserControls
         CRUDRaceViewModel vm = new CRUDRaceViewModel();
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            //Adds the dynamically created buttons to the user control
             this.DataContext = vm;
             vm.AddButtonsToCrudbar();
             foreach (var item in vm.Crudbuttons)
@@ -39,6 +40,7 @@ namespace DndCharacterCreation_WPF.UserControls
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
+            //Opens the Create Race Window
             CreateRaceView view = new CreateRaceView();
             CreateRaceViewModel vm = new CreateRaceViewModel();
             view.DataContext = vm;

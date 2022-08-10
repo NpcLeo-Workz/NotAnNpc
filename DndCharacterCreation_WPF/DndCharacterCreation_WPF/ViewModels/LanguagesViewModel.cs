@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DndCharacterCreation_WPF.ViewModels
 {
-    class LanguagesViewModel
+    public class LanguagesViewModel
     {
     }
 }
