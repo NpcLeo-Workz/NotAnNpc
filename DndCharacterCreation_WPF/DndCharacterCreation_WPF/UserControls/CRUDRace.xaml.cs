@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DndCharacterCreation_WPF.Views;
 using DndCharacterCreation_WPF.ViewModels;
+using DndCharacterCreation_Model;
 
 namespace DndCharacterCreation_WPF.UserControls
 {
@@ -43,6 +44,7 @@ namespace DndCharacterCreation_WPF.UserControls
             //Opens the Create Race Window
             CreateRaceView view = new CreateRaceView();
             CreateRaceViewModel vm = new CreateRaceViewModel();
+            Session.ClosePreviousWindow(view);
             view.DataContext = vm;
             view.Show();
         }

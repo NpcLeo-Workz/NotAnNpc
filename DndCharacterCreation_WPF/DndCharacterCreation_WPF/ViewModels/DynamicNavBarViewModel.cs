@@ -60,6 +60,7 @@ namespace DndCharacterCreation_WPF.ViewModels
             btnLanguages.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFD0A85C"));
             btnLanguages.BorderThickness = new System.Windows.Thickness(1,0,0,0);
             btnLanguages.Background = null;
+            btnLanguages.Height = double.NaN;
             btnLanguages.CommandParameter = "Languages";
             btnLanguages.Command = ExecuteButtonCommand;
             Grid.SetColumn(btnLanguages, 3);

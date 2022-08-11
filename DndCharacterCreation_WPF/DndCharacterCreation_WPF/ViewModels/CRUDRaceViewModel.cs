@@ -64,6 +64,7 @@ namespace DndCharacterCreation_WPF.ViewModels
             btnDelete.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFD0A85C"));
             btnDelete.BorderThickness = new System.Windows.Thickness(1);
             btnDelete.Background = null;
+            btnDelete.Height = double.NaN;
             btnDelete.CommandParameter = "Delete";
             btnDelete.Command = ExecuteButtonCommand;
             Grid.SetColumn(btnDelete, 2);
@@ -78,6 +79,7 @@ namespace DndCharacterCreation_WPF.ViewModels
             btnEdit.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFD0A85C"));
             btnEdit.BorderThickness = new System.Windows.Thickness(1);
             btnEdit.Background = null;
+            btnEdit.Height = double.NaN;
             btnEdit.CommandParameter = "Edit";
             btnEdit.Command = ExecuteButtonCommand;
             Grid.SetColumn(btnEdit, 1);

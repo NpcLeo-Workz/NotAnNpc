@@ -28,10 +28,5 @@ namespace DndCharacterCreation_WPF.Views
         {
             this.Close();
         }
-
-        private void btnCreate_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

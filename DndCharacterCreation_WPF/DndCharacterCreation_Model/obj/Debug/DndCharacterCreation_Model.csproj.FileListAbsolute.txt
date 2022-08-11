@@ -4,3 +4,14 @@ D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\obj\Debug\DndC
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\obj\Debug\DndCharacterCreation_Model.csproj.CoreCompileInputs.cache
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\obj\Debug\DndCharacterCreation_Model.dll
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\obj\Debug\DndCharacterCreation_Model.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\DndCharacterCreation_Model.dll.config
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\EntityFramework.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\EntityFramework.xml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\obj\Debug\DndCharacterCreation_Model.csproj.CopyComplete
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\MaterialDesignColors.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\MaterialDesignColors.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_Model\bin\Debug\MaterialDesignThemes.Wpf.xml

@@ -45,3 +45,12 @@ D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\UserControls\CRUDRace.baml
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\CreateRaceView.baml
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\EditRaceView.baml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\EntityFramework.SqlServer.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\DndCharacterCreation_Model.dll.config
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\EntityFramework.SqlServer.xml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\MaterialDesignColors.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\MaterialDesignColors.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\App.baml

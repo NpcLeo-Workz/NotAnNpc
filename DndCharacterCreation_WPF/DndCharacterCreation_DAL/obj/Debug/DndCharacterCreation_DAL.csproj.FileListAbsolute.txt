@@ -10,3 +10,10 @@ D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCha
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.CopyComplete
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.dll
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.Migrations.InitialCreate.resources
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.GenerateResource.cache
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\MaterialDesignColors.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\MaterialDesignColors.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\MaterialDesignThemes.Wpf.xml

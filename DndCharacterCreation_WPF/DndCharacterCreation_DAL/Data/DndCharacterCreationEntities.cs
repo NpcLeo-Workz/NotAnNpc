@@ -10,7 +10,7 @@ namespace DndCharacterCreation_DAL.Data
 {
     public class DndCharacterCreationEntities : DbContext
     {
-        public DndCharacterCreationEntities() : base("name=DndCharacterCreationDbConnectionString")
+        public DndCharacterCreationEntities() : base("name=NotAnNpcDbConnectionString")
         {
             
         }

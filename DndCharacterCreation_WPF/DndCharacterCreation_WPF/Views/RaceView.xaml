@@ -31,7 +31,67 @@
             <Border.Background>
                 <SolidColorBrush Color="Black" Opacity="0.65"/>
             </Border.Background>
+            <DataGrid x:Name="DataRaces" ItemsSource="{Binding Races}" SelectedItem="{Binding SelectedRace}" AutoGenerateColumns="False" IsReadOnly="True" Background="{x:Null}" BorderBrush="#FFD0A85C" Foreground="#FFD0A85C" FontSize="20">
+                <DataGrid.Columns>
 
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="5*" Foreground="#FFD0A85C">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Margin" Value="10"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="str" Binding="{Binding abilityScoreBonus.strength}" Width="1*" Foreground="#FFD0A85C">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Margin" Value="10"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="dex" Binding="{Binding abilityScoreBonus.dexterity}" Width="1*" Foreground="#FFD0A85C">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Margin" Value="10"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="con" Binding="{Binding abilityScoreBonus.constitution}" Width="1*" Foreground="#FFD0A85C">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Margin" Value="10"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="int" Binding="{Binding abilityScoreBonus.inteligence}" Width="1*" Foreground="#FFD0A85C">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Margin" Value="10"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="wis" Binding="{Binding abilityScoreBonus.wisdom}" Width="1*" Foreground="#FFD0A85C">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Margin" Value="10"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Cha" Binding="{Binding abilityScoreBonus.charisma}" Width="1*" Foreground="#FFD0A85C">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Margin" Value="10"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </Border>
         <Border Grid.Row="1" Grid.Column="2" BorderBrush="#FFD0A85C" BorderThickness="1" Margin="20,10,20,10">
             <Border.Background>
