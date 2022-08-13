@@ -23,15 +23,5 @@ namespace DndCharacterCreation_WPF.Views
         {
             InitializeComponent();
         }
-
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

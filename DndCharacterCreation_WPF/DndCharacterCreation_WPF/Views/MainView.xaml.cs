@@ -32,6 +32,7 @@ namespace DndCharacterCreation_WPF.Views
         {
             // Opens Race view as user
             Session.logintype = "User";
+            Session.activewindowname = "RaceView";
             RaceView view = new RaceView();
             RaceViewModel vm = new RaceViewModel();
             view.DataContext = vm;
@@ -44,6 +45,7 @@ namespace DndCharacterCreation_WPF.Views
         {
             // Opens Race view as Admin
             Session.logintype = "Admin";
+            Session.activewindowname = "RaceView";
             RaceView view = new RaceView();
             RaceViewModel vm = new RaceViewModel();
             view.DataContext = vm;

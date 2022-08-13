@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\App.xaml
-71963528084
+9491058696
 
-191177038891
-129-546811588
-UserControls\CRUDRace.xaml;UserControls\NavBar.xaml;Views\CreateRaceView.xaml;Views\EditRaceView.xaml;Views\MainView.xaml;Views\LanguagesView.xaml;Views\RaceView.xaml;
+23-357684864
+130908340492
+UserControls\CRUDRace.xaml;UserControls\NavBar.xaml;Views\CreateLanguageView.xaml;Views\CreateRaceView.xaml;Views\EditLanguageView.xaml;Views\EditRaceView.xaml;Views\MainView.xaml;Views\LanguagesView.xaml;Views\RaceView.xaml;
 
 False
 

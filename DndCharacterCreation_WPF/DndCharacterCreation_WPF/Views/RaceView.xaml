@@ -103,8 +103,71 @@
                     <RowDefinition Height="7*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                
-                <!--Crud operation usercontrol-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                   
+                   
+                    <!--Begin Content-->
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Foreground="#FFD0A85C" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="AbilityScores:" Foreground="#FFD0A85C" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Size:" Foreground="#FFD0A85C" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                    <TextBlock Grid.Row="3" Grid.Column="0" Text="WalkSpeed:" Foreground="#FFD0A85C" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                    <TextBlock Grid.Row="4" Grid.Column="0" Text="SwimSpeed:" Foreground="#FFD0A85C" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Text="FlySpeed:" Foreground="#FFD0A85C" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                    <TextBlock Grid.Row="6" Grid.Column="0" Text="ClimbSpeed:" Foreground="#FFD0A85C" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                    <TextBlock Grid.Row="7" Grid.Column="0" Text="CreatureType:" Foreground="#FFD0A85C" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                    <TextBlock x:Name="Name" Text="{Binding SelectedRace.Name}" Grid.Row="0" Grid.Column="1" Margin="10" Foreground="#FFD0A85C" Background="{x:Null}" FontSize="20" VerticalAlignment="Center" />
+
+                    <!--AbilityScore Grid -->
+
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Str:" Foreground="#FFD0A85C" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                        <TextBlock x:Name="str" Text="{Binding AbilityScoreBonus.strength}" Grid.Row="0" FontSize="20" Grid.Column="1" Foreground="#FFD0A85C" Margin="5,5,10,5"  Background="{x:Null}" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Dex:" Foreground="#FFD0A85C" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                        <TextBlock x:Name="dex" Text="{Binding AbilityScoreBonus.dexterity}" Grid.Row="1" FontSize="20" Grid.Column="1" Foreground="#FFD0A85C" Margin="5,5,10,5"  Background="{x:Null}" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Con:" Foreground="#FFD0A85C" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                        <TextBlock x:Name="con" Text="{Binding AbilityScoreBonus.constitution}" Grid.Row="2" FontSize="20" Grid.Column="1" Foreground="#FFD0A85C" Margin="5,5,10,5"  Background="{x:Null}" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Int:" Foreground="#FFD0A85C" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                        <TextBlock x:Name="int" Text="{Binding AbilityScoreBonus.inteligence}" Grid.Row="3" FontSize="20" Grid.Column="1" Foreground="#FFD0A85C" Margin="5,5,10,5" Background="{x:Null}" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Wis:" Foreground="#FFD0A85C" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                        <TextBlock x:Name="wis" Text="{Binding AbilityScoreBonus.wisdom}" Grid.Row="4" Grid.Column="1" FontSize="20" Foreground="#FFD0A85C" Margin="5,5,10,5"  Background="{x:Null}" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Cha:" Foreground="#FFD0A85C" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                        <TextBlock x:Name="Cha" Text="{Binding AbilityScoreBonus.charisma}" Grid.Row="5" Grid.Column="1" FontSize="20" Foreground="#FFD0A85C" Margin="5,5,10,5"  Background="{x:Null}" VerticalAlignment="Center"/>
+
+                    </StackPanel>
+
+
+                    <!--Size, Speeds and CreatureSize -->
+                    <TextBlock x:Name="Size" Text="{Binding SelectedRace.Size}" Grid.Row="2" Grid.Column="1" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="WalkSpeed" Text="{Binding SelectedRace.SpeedWalk}" Grid.Row="3" Grid.Column="1" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="SwimSpeed" Text="{Binding SelectedRace.SpeedSwim}" Grid.Row="4" Grid.Column="1" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="FlySpeed" Text="{Binding SelectedRace.SpeedFly}" Grid.Row="5" Grid.Column="1" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="ClimbSpeed" Text="{Binding SelectedRace.SpeedClimb}" Grid.Row="6" Grid.Column="1" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="CreatureType" Text="{Binding SelectedRace.CreatureType}" Grid.Row="7" Grid.Column="1" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="Languages" Text="Languages:" Grid.Row="8" Grid.Column="0" Margin="10" FontSize="20" HorizontalAlignment="Right" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1">
+                        <TextBlock x:Name="Language1" Text="{Binding Language1}"  Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="Language2" Text="{Binding Language2}"  Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="Language3" Text="{Binding Language3}" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
+
+                    </StackPanel>
+                    
+                </Grid>
                 <uc:CRUDRace Grid.Row="1" Margin="10"/>
             </Grid>
         </Border>

@@ -8,14 +8,22 @@ using DndCharacterCreation_Model;
 using System.Windows.Media;
 using System.Windows.Input;
 using DndCharacterCreation_WPF.Views;
+using DndCharacterCreation_DAL.Data.UnitOfWork;
+using DndCharacterCreation_DAL.Data;
+using DndCharacterCreation_DAL.DomainModels;
+using System.Collections.ObjectModel;
+using DndCharacterCreation_WPF.ViewModels;
 
 namespace DndCharacterCreation_WPF.ViewModels
 {
-    public class CRUDRaceViewModel : BaseViewModel
+    public class CRUDRaceViewModel : BaseViewModel, IDisposable
     {
+        private UnitOfWork unitOfWork = new UnitOfWork(new DndCharacterCreationEntities());
         // the CRUDRaceViewModel is responsible for adding the needed buttons to the Crudbuttons list
         public List<Button> Crudbuttons = new List<Button>();
         public RelayCommand _executeButtonCommand;
+        public Race SelectedRace { get; set; }
+        public Language SelectedLanguage { get; set; }
         //the relaycommand executebuttoncommand is used to add the executecommand to the dynamically created buttons with the right parameter
         public ICommand ExecuteButtonCommand
         {
@@ -39,7 +47,7 @@ namespace DndCharacterCreation_WPF.ViewModels
         {
             switch (parameter.ToString())
             {
-                case "Edit": ShowEditRaceView(); break;
+                case "Edit": ShowEditView(); break;
                 case "Delete": DeleteRace(); break;
             }
         }
@@ -86,17 +94,48 @@ namespace DndCharacterCreation_WPF.ViewModels
             Crudbuttons.Add(btnEdit);
         }
 
-        public void ShowEditRaceView()
+        public void ShowEditView()
         {
-            EditRaceView view = new EditRaceView();
-            EditRaceViewModel vm = new EditRaceViewModel();
-            view.DataContext = vm;
-            view.Show();
+            switch(Session.activewindowname){
+                case "RaceView":
+                    EditRaceView view = new EditRaceView();
+                    EditRaceViewModel vm = new EditRaceViewModel();
+                    Session.ClosePreviousWindow(view);
+                    view.DataContext = vm;
+                    view.Show();
+                    break;
+                case "LanguageView":
+                    EditLanguageView view1 = new EditLanguageView();
+                    EditLanguageViewModel vm1 = new EditLanguageViewModel();
+                    Session.ClosePreviousWindow(view1);
+                    view1.DataContext = vm1;
+                    view1.Show();
+                    break;
+            }
+            
         }
         public void DeleteRace()
         {
-
+            switch (Session.activewindowname)
+            {
+                case "RaceView":
+                    SelectedRace = unitOfWork.RaceRepo.Download(x => x.RaceID == Session.SelectedItemId, y => y.abilityScoreBonus).SingleOrDefault();
+                    unitOfWork.RaceRepo.Delete(SelectedRace);
+                    unitOfWork.Save();
+                    break;
+                case "LanguageView":
+                    SelectedLanguage = unitOfWork.LanguageRepo.Download(x => x.LanguageID == Session.SelectedItemId).SingleOrDefault();
+                    unitOfWork.LanguageRepo.Delete(SelectedLanguage);
+                    unitOfWork.Save();
+                    break;
+            }
+            
+            
         }
         public override string this[string columnName] => throw new NotImplementedException();
+        public void Dispose()
+        {
+            unitOfWork?.Dispose();
+        }
     }
 }

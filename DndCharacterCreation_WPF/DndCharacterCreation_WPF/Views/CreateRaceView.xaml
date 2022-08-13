@@ -104,7 +104,7 @@
                 <SolidColorBrush Color="Black" Opacity="0.65"/>
             </Button.Background>
         </Button>
-        <Button Grid.Row="10" Grid.Column="1" x:Name="btnCancel" Content="Cancel" FontSize="30" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Margin="10" Click="btnCancel_Click" Height="Auto">
+        <Button Grid.Row="10" Grid.Column="1" x:Name="btnCancel" Content="Cancel" Command="{Binding}" CommandParameter="Cancel" FontSize="30" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Margin="10" Height="Auto">
             <Button.Background>
                 <SolidColorBrush Color="Black" Opacity="0.65"/>
             </Button.Background>

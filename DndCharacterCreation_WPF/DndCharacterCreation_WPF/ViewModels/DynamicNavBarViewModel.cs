@@ -68,6 +68,7 @@ namespace DndCharacterCreation_WPF.ViewModels
         }
         public void ShowLanguages()
         {
+            Session.activewindowname = "LanguageView";
             LanguagesView view = new LanguagesView();
             LanguagesViewModel vm = new LanguagesViewModel();
             view.DataContext = vm;

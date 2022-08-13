@@ -53,6 +53,7 @@ namespace DndCharacterCreation_WPF.UserControls
         private void btnRace_Click(object sender, RoutedEventArgs e)
         {
             //Opens the Race Window
+            Session.activewindowname = "RaceView";
             RaceView view = new RaceView();
             RaceViewModel vm = new RaceViewModel();
             view.DataContext = vm;

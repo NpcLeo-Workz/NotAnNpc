@@ -54,3 +54,9 @@ D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\Materi
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\App.baml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\DndCharacterCreation_WPF.csproj.Fody.CopyLocal.cache
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\DndCharacterCreation_WPF.csproj.Fody.RuntimeCopyLocal.cache
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\CreateLanguageView.g.cs
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\CreateLanguageView.baml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\EditLanguageView.g.cs
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\EditLanguageView.baml

@@ -45,30 +45,34 @@ namespace DndCharacterCreation_WPF.ViewModels
 
         private void AddRace()
         {
-            Race race = new Race()
-            {
-                Name = Name,
-                AbilityScoreBonusID = CheckAbilityScores(),
-                Size = Size,
-                SpeedWalk = int.Parse(WalkSpeed),
-                SpeedSwim = int.Parse(SwimSpeed),
-                SpeedClimb = int.Parse(ClimbSpeed),
-                SpeedFly = int.Parse(FlySpeed),
-                CreatureType = CreatureType
+            if(!unitOfWork.RaceRepo.Download(x => x.Name == Name).Any()){
+                Race race = new Race()
+                {
+                    Name = Name,
+                    AbilityScoreBonusID = CheckAbilityScores(),
+                    Size = Size,
+                    SpeedWalk = int.Parse(WalkSpeed),
+                    SpeedSwim = int.Parse(SwimSpeed),
+                    SpeedClimb = int.Parse(ClimbSpeed),
+                    SpeedFly = int.Parse(FlySpeed),
+                    CreatureType = CreatureType
 
-            };
-            if (IsValid())
-            {
-                unitOfWork.RaceRepo.Add(race);
-                int ok = unitOfWork.Save();
+                };
+                if (IsValid())
+                {
+                    unitOfWork.RaceRepo.Add(race);
+                    unitOfWork.Save();
 
-                AddLanguageRace(race);
+                    AddLanguageRace(race);
+                }
+                RaceView view = new RaceView();
+                RaceViewModel vm = new RaceViewModel();
+                view.DataContext = vm;
+                Session.ClosePreviousWindow(view);
+                view.Show();
             }
-            RaceView view = new RaceView();
-            RaceViewModel vm = new RaceViewModel();
-            view.DataContext = vm;
-            Session.ClosePreviousWindow(view);
-            view.Show();
+            
+            
             
         }
         public void AddLanguageRace(Race race)
@@ -141,12 +145,7 @@ namespace DndCharacterCreation_WPF.ViewModels
                 .Where(c => c.inteligence == abilityScoreBonus.inteligence)
                 .Where(c => c.wisdom == abilityScoreBonus.wisdom)
                 .Where(c => c.charisma == abilityScoreBonus.charisma);
-            foreach(var item in abilityScoreBonus1)
-            {
-                
-                AsbId = item.AbilityScoreBonusID;
-                Console.WriteLine(AsbId);
-            }
+            AsbId = abilityScoreBonus1.First().AbilityScoreBonusID;
             return AsbId;
         }
         public override string this[string columnName]
@@ -160,6 +159,14 @@ namespace DndCharacterCreation_WPF.ViewModels
                 return "";
             }
         }
+        public void Cancel()
+        {
+            RaceView view = new RaceView();
+            RaceViewModel vm = new RaceViewModel();
+            view.DataContext = vm;
+            Session.ClosePreviousWindow(view);
+            view.Show();
+        }
 
         public override bool CanExecute(object parameter)
         {
@@ -170,6 +177,7 @@ namespace DndCharacterCreation_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "AddRace": AddRace(); break;
+                case "Cancel": Cancel(); break;
             }
         }
         public void Dispose()

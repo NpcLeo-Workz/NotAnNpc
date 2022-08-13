@@ -4,6 +4,7 @@ namespace DndCharacterCreation_Model
 {
     public static class Session
     {
+        public static int SelectedItemId;
         // Keeps the current login type (admin or user)
         public static string logintype;
         // keeps the sessions current window
@@ -17,5 +18,6 @@ namespace DndCharacterCreation_Model
             }
             window = view;
         }
+        public static string activewindowname;
     }
 }

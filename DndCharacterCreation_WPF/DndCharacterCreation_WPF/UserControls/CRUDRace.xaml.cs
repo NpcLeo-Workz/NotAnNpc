@@ -41,12 +41,25 @@ namespace DndCharacterCreation_WPF.UserControls
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            //Opens the Create Race Window
-            CreateRaceView view = new CreateRaceView();
-            CreateRaceViewModel vm = new CreateRaceViewModel();
-            Session.ClosePreviousWindow(view);
-            view.DataContext = vm;
-            view.Show();
+            switch (Session.activewindowname)
+            {
+                case "RaceView":
+                    //Opens the Create Race Window
+                    CreateRaceView view = new CreateRaceView();
+                    CreateRaceViewModel vm = new CreateRaceViewModel();
+                    Session.ClosePreviousWindow(view);
+                    view.DataContext = vm;
+                    view.Show();
+                    break;
+                case "LanguageView":
+                    CreateLanguageView view1 = new CreateLanguageView();
+                    CreateLanguageViewModel vm1 = new CreateLanguageViewModel();
+                    Session.ClosePreviousWindow(view1);
+                    view1.DataContext = vm1;
+                    view1.Show();
+                    break;
+            }
+            
         }
     }
 }

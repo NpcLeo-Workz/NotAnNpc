@@ -37,7 +37,7 @@ namespace DndCharacterCreation_DAL.Data.Repositories
             Context.Entry(entity).State = EntityState.Deleted;
         }
 
-        public IEnumerable<T> Download(Expression<Func<T, bool>> voorwaarden,
+        public IEnumerable<T> Download(Expression<Func<T, bool>> Req,
             params Expression<Func<T, object>>[] includes)
         {
             IQueryable<T> query = Context.Set<T>();
@@ -48,9 +48,9 @@ namespace DndCharacterCreation_DAL.Data.Repositories
                     query = query.Include(item);
                 }
             }
-            if (voorwaarden != null)
+            if (Req != null)
             {
-                query = query.Where(voorwaarden);
+                query = query.Where(Req);
             }
             return query.ToList();
         }

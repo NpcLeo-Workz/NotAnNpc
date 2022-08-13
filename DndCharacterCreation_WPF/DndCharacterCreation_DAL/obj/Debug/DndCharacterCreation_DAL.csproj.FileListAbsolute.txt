@@ -5,7 +5,6 @@ D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\Entity
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\EntityFramework.SqlServer.dll
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\EntityFramework.xml
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\EntityFramework.SqlServer.xml
-D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.AssemblyReference.cache
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.CoreCompileInputs.cache
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.CopyComplete
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.dll
@@ -17,3 +16,6 @@ D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\Materi
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\MaterialDesignColors.pdb
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\MaterialDesignThemes.Wpf.pdb
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.Fody.CopyLocal.cache
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.Fody.RuntimeCopyLocal.cache
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_DAL\obj\Debug\DndCharacterCreation_DAL.csproj.AssemblyReference.cache
