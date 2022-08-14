@@ -21,7 +21,7 @@
                 <!--Only the Create button is hardcoded as the other buttons depend on the sessions logintype
                     Some of the Races can only be accessed by the Admin-->
                 
-                <Button Grid.Column="0"  x:Name="btnCreate" Content="Create" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="1" Background="{x:Null}" FontSize="30" Click="btnCreate_Click" >
+                <Button Grid.Column="0"  x:Name="btnCreate" Content="Create" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="1" Background="{x:Null}" FontSize="30" Command="{Binding}" CommandParameter="Create" Height="Auto" >
                 </Button>
                 
             </Grid>

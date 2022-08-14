@@ -44,7 +44,7 @@
                 <Label Grid.ColumnSpan="2" Foreground="#FFD0A85C" FontSize="20">Will become login</Label>
                 
                 <!--Temp admin function-->
-                <Button Grid.Row="1" Grid.ColumnSpan="2" x:Name="btnRaceAdmin" Content="Create Character Admin" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Width="150" Click="btnRaceAdmin_Click" >
+                <Button Grid.Row="1" Grid.ColumnSpan="2" x:Name="btnRaceAdmin" Content="Create Character Admin" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Width="190" Command="{Binding}" CommandParameter="LoginAdmin" >
                     <Button.Background>
                         <SolidColorBrush Color="Black" Opacity="0.65"/>
                     </Button.Background>
@@ -62,7 +62,7 @@
                 <TextBlock  Foreground="#FFD0A85C" FontFamily="Zorque" FontSize="62" Text="Build Your Story"/>
                 <TextBlock  Foreground="#FFD0A85C" FontFamily="Zorque" FontSize="62" Text="Today!"/>
             </StackPanel>
-            <Button Grid.Row="1" x:Name="btnRace" Content="Create Character" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Width="200" Click="btnRace_Click" >
+            <Button Grid.Row="1" x:Name="btnRace" Content="Create Character" Foreground="#FFD0A85C"  BorderBrush="#FFD0A85C" BorderThickness="2" Width="200" Command="{Binding}" CommandParameter="LoginUser" >
                 <Button.Background>
                     <SolidColorBrush Color="Black" Opacity="0.65"/>
                 </Button.Background>
