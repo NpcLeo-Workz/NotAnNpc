@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DndCharacterCreation_WPF.Views;
+using DndCharacterCreation_Model;
 
 namespace DndCharacterCreation_WPF.ViewModels
 {
@@ -11,9 +9,25 @@ namespace DndCharacterCreation_WPF.ViewModels
         public MainViewModel()
         {
         }
+        public void ShowRaceView(string logintype)
+        {
+            Session.logintype = logintype;
+            Session.activewindowname = "RaceView";
+            RaceView view = new RaceView();
+            RaceViewModel vm = new RaceViewModel();
+            view.DataContext = vm;
+            // closes previous window
+            Session.ClosePreviousWindow(view);
+            view.Show();
+        }
         public override string this[string columnName] => throw new NotImplementedException();
         public override bool CanExecute(object parameter)
         {
+            switch (parameter.ToString())
+            {
+                case "LoginUser": return true;
+                case "LoginAdmin": return true;
+            }
             return true;
         }
 
@@ -21,7 +35,8 @@ namespace DndCharacterCreation_WPF.ViewModels
         {
             switch (parameter.ToString())
             {
-
+                case "LoginUser": ShowRaceView("User"); break;
+                case "LoginAdmin": ShowRaceView("Admin"); break;
             }
         }      
     }

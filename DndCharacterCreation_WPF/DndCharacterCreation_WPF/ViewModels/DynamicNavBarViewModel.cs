@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using DndCharacterCreation_Model;
 using System.Windows.Media;
@@ -31,6 +28,9 @@ namespace DndCharacterCreation_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "Languages": return true;
+                case "Traits": return true;
+                case "Logout": return true;
+                case "Races": return true;
             }
             return true;
         }
@@ -39,7 +39,28 @@ namespace DndCharacterCreation_WPF.ViewModels
             switch (parameter.ToString())
             {
                 case "Languages": ShowLanguages(); break;
+                case "Traits": ShowTraits(); break;
+                case "Logout": Logout(); break;
+                case "Races": ShowRaces(); break;
             }
+        }
+        public void ShowRaces()
+        {
+            Session.activewindowname = "RaceView";
+            RaceView view = new RaceView();
+            RaceViewModel vm = new RaceViewModel();
+            view.DataContext = vm;
+            Session.ClosePreviousWindow(view);
+            view.Show();
+        }
+        public void Logout()
+        {
+            Session.logintype = "";
+            MainView view = new MainView();
+            MainViewModel vm = new MainViewModel();
+            view.DataContext = vm;
+            Session.ClosePreviousWindow(view);
+            view.Show();
         }
         public void AddButtonsToNavbar()
         {
@@ -48,6 +69,7 @@ namespace DndCharacterCreation_WPF.ViewModels
             {
                 case "Admin":
                     AddLanguagesbutton();
+                    AddTraitsbutton();
                     break;
             }
         }
@@ -66,6 +88,22 @@ namespace DndCharacterCreation_WPF.ViewModels
             Grid.SetColumn(btnLanguages, 3);
             Navbarbuttons.Add(btnLanguages);
         }
+        private void AddTraitsbutton()
+        {
+
+            Button btnTraits = new Button();
+            btnTraits.Content = "Traits";
+            btnTraits.FontSize = 30;
+            btnTraits.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFD0A85C"));
+            btnTraits.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFD0A85C"));
+            btnTraits.BorderThickness = new System.Windows.Thickness(1, 0, 0, 0);
+            btnTraits.Background = null;
+            btnTraits.Height = double.NaN;
+            btnTraits.CommandParameter = "Traits";
+            btnTraits.Command = ExecuteButtonCommand;
+            Grid.SetColumn(btnTraits, 2);
+            Navbarbuttons.Add(btnTraits);
+        }
         public void ShowLanguages()
         {
             Session.activewindowname = "LanguageView";
@@ -75,6 +113,15 @@ namespace DndCharacterCreation_WPF.ViewModels
             Session.ClosePreviousWindow(view);
             view.Show();
 
+        }
+        public void ShowTraits()
+        {
+            Session.activewindowname = "TraitView";
+            TraitsView view = new TraitsView();
+            TraitsViewModel vm = new TraitsViewModel();
+            view.DataContext = vm;
+            Session.ClosePreviousWindow(view);
+            view.Show();
         }
         public override string this[string columnName] => throw new NotImplementedException();
     }

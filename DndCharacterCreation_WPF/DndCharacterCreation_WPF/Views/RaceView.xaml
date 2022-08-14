@@ -114,6 +114,7 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
+                        <RowDefinition Height="2.5*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
@@ -166,7 +167,28 @@
                         <TextBlock x:Name="Language3" Text="{Binding Language3}" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center"/>
 
                     </StackPanel>
-                    
+                    <TextBlock x:Name="Traits" Text="Traits:" Grid.Row="9" Grid.Column="0" Margin="10" FontSize="20" Foreground="#FFD0A85C"  Background="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                    <DataGrid x:Name="DataTraits" Grid.Row="9" Grid.Column="1" Grid.RowSpan="3" ItemsSource="{Binding Traits}" SelectedItem="{Binding SelectedTrait}" AutoGenerateColumns="False" IsReadOnly="True" Background="{x:Null}" BorderBrush="#FFD0A85C" Foreground="#FFD0A85C" FontSize="20" HeadersVisibility="None">
+                        <DataGrid.Columns>
+
+                            <DataGridTextColumn Header="Trait Name" Binding="{Binding Name}" Width="5*" Foreground="#FFD0A85C">
+                                <DataGridTextColumn.HeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="Margin" Value="10"/>
+                                    </Style>
+                                </DataGridTextColumn.HeaderStyle>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="5*" Foreground="#FFD0A85C">
+                                <DataGridTextColumn.HeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="Margin" Value="10"/>
+                                    </Style>
+                                </DataGridTextColumn.HeaderStyle>
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
                 <uc:CRUDRace Grid.Row="1" Margin="10"/>
             </Grid>

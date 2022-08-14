@@ -103,24 +103,33 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\CreateLanguageViewModel.cs" />
     <Compile Include="ViewModels\CreateRaceViewModel.cs" />
+    <Compile Include="ViewModels\CreateTraitViewModel.cs" />
     <Compile Include="ViewModels\CRUDRaceViewModel.cs" />
     <Compile Include="ViewModels\DynamicNavBarViewModel.cs" />
     <Compile Include="ViewModels\EditLanguageViewModel.cs" />
     <Compile Include="ViewModels\EditRaceViewModel.cs" />
+    <Compile Include="ViewModels\EditTraitViewModel.cs" />
     <Compile Include="ViewModels\LanguagesViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RaceViewModel.cs" />
+    <Compile Include="ViewModels\TraitsViewModel.cs" />
     <Compile Include="Views\CreateLanguageView.xaml.cs">
       <DependentUpon>CreateLanguageView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CreateRaceView.xaml.cs">
       <DependentUpon>CreateRaceView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CreateTraitView.xaml.cs">
+      <DependentUpon>CreateTraitView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EditLanguageView.xaml.cs">
       <DependentUpon>EditLanguageView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EditRaceView.xaml.cs">
       <DependentUpon>EditRaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditTraitView.xaml.cs">
+      <DependentUpon>EditTraitView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -130,6 +139,9 @@
     </Compile>
     <Compile Include="Views\RaceView.xaml.cs">
       <DependentUpon>RaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TraitsView.xaml.cs">
+      <DependentUpon>TraitsView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -176,11 +188,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CreateTraitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\EditLanguageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EditRaceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditTraitView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,6 +213,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\RaceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TraitsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

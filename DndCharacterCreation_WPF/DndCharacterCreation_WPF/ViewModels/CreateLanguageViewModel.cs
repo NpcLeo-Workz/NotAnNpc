@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DndCharacterCreation_DAL.Data.UnitOfWork;
 using DndCharacterCreation_DAL.Data;
 using DndCharacterCreation_DAL.DomainModels;
 using DndCharacterCreation_Model;
-using System.Collections.ObjectModel;
 using DndCharacterCreation_WPF.Views;
-using DndCharacterCreation_WPF.ViewModels;
 
 namespace DndCharacterCreation_WPF.ViewModels
 {
@@ -17,14 +12,15 @@ namespace DndCharacterCreation_WPF.ViewModels
     {
         private UnitOfWork unitOfWork = new UnitOfWork(new DndCharacterCreationEntities());
         public string Name { get; set; }
-        public string Description { get; set; }
+        public string Description { get; set; }   
         private void AddLanguage()
         {
+            // checks if language already exists
             if(!unitOfWork.LanguageRepo.Download(x => x.Name == Name).Any())
             {
                 Language lang = new Language()
                 {
-                    Name = Name,
+                    Name = Name,                 
                     Description = Description
                 };
                 if (IsValid())
@@ -32,6 +28,7 @@ namespace DndCharacterCreation_WPF.ViewModels
                     unitOfWork.LanguageRepo.Add(lang);
                     unitOfWork.Save();
                 }
+                //Creates new Language View
                 LanguagesView view = new LanguagesView();
                 LanguagesViewModel vm = new LanguagesViewModel();
                 view.DataContext = vm;
@@ -55,6 +52,7 @@ namespace DndCharacterCreation_WPF.ViewModels
         }
         public void Cancel()
         {
+            // cancels language creation
             LanguagesView view = new LanguagesView();
             LanguagesViewModel vm = new LanguagesViewModel();
             view.DataContext = vm;

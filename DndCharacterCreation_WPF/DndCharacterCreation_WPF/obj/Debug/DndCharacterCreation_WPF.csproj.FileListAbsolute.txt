@@ -60,3 +60,9 @@ D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\CreateLanguageView.baml
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\EditLanguageView.g.cs
 D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\EditLanguageView.baml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\CreateTraitView.g.cs
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\EditTraitView.g.cs
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\TraitsView.g.cs
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\CreateTraitView.baml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\EditTraitView.baml
+D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\Views\TraitsView.baml

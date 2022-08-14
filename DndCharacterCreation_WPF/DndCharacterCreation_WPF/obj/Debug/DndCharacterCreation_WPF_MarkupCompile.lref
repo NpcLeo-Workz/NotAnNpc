@@ -1,4 +1,4 @@
-﻿D:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+﻿
 FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\App.xaml;;
 FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\UserControls\CRUDRace.xaml;;
 FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\UserControls\NavBar.xaml;;
@@ -9,4 +9,7 @@ FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\Views\EditRaceV
 FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\Views\MainView.xaml;;
 FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\Views\LanguagesView.xaml;;
 FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\Views\RaceView.xaml;;
+FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\Views\CreateTraitView.xaml;;
+FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\Views\EditTraitView.xaml;;
+FD:\dndproject\DndCharacterCreation_WPF\DndCharacterCreation_WPF\Views\TraitsView.xaml;;
 

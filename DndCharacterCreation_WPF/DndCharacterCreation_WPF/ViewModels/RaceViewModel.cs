@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using DndCharacterCreation_DAL.DomainModels;
 using DndCharacterCreation_DAL.Data.UnitOfWork;
 using DndCharacterCreation_DAL.Data;
 using DndCharacterCreation_Model;
 using System.Collections.ObjectModel;
-using DndCharacterCreation_WPF.Views;
-using DndCharacterCreation_WPF.ViewModels;
 
 namespace DndCharacterCreation_WPF.ViewModels
 {
@@ -22,6 +16,8 @@ namespace DndCharacterCreation_WPF.ViewModels
         public string Language2 { get; set; }
         public string Language3 { get; set; }
         public AbilityScoreBonus AbilityScoreBonus { get; set; }
+        public ObservableCollection<RaceTrait> RaceTraits { get; set; }
+        public ObservableCollection<Trait> Traits { get; set; }
         public ObservableCollection<LanguageRace> LanguageRace1 { get; set; }
         private ObservableCollection<Race> _races;
         public ObservableCollection<Race> Races { get { return _races; } set { _races = value; NotifyPropertyChanged(); } }
@@ -33,6 +29,12 @@ namespace DndCharacterCreation_WPF.ViewModels
                 {
                     AbilityScoreBonus = unitOfWork.AbilityScoreBonusRepo.Download(x => x.AbilityScoreBonusID == SelectedRace.AbilityScoreBonusID).SingleOrDefault();
                     LanguageRace1 = new ObservableCollection<LanguageRace>(unitOfWork.LanguageRaceRepo.Download(x => x.RaceID == SelectedRace.RaceID, y => y.Language));
+                    RaceTraits = new ObservableCollection<RaceTrait>(unitOfWork.RaceTraitRepo.Download(x => x.RaceID == SelectedRace.RaceID, y => y.Trait));
+                    Traits = new ObservableCollection<Trait>();
+                    foreach(var item in RaceTraits)
+                    {
+                        Traits.Add(item.Trait);
+                    }
                     Language1 = LanguageRace1[0].Language.Name;
                     Language2 = LanguageRace1[1].Language.Name;
                     Language3 = LanguageRace1[2].Language.Name;
